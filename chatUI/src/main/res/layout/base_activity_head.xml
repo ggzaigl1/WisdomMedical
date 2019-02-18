@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/Rl_bg"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize">
+
+    <android.support.v7.widget.AppCompatImageView
+            android:id="@+id/iv_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="15dp"
+            android:layout_centerVertical="true"
+            app:srcCompat="@drawable/ic_back"
+            tools:ignore="VectorDrawableCompat"/>
+
+    <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textColor="@color/txtSuperColor"
+            android:textSize="20dp"/>
+
+    <TextView
+            android:id="@+id/tv_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/vm_size_10"
+            android:textColor="@color/txtSuperColor"
+            android:textSize="@dimen/vm_size_16"
+            android:padding="5dp"
+            android:visibility="visible"
+            tools:ignore="SpUsage"/>
+
+    <ImageView
+            android:id="@+id/iv_right"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/vm_size_10"
+            android:background="@drawable/ic_characeter_choose_plus"
+            android:visibility="gone"
+            tools:ignore="SpUsage"/>
+</RelativeLayout>

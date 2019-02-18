@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:orientation="vertical"
+            tools:context=".ui.personal.activity.EditMedRecordActivity">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include layout="@layout/base_activity_head" />
+
+        <LinearLayout
+            android:id="@+id/rl_type"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dp_12">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="病历类型"
+                android:textColor="#afb2c4"
+                android:textSize="@dimen/dp_16" />
+
+            <TextView
+                android:id="@+id/tv_type"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:drawableEnd="@drawable/svg_right_arrow"
+                android:drawablePadding="@dimen/dp_6"
+                android:gravity="right"
+                android:text="医嘱单"
+                android:textColor="@color/txtSuperColor"
+                android:textSize="@dimen/dp_16"
+                tools:ignore="SpUsage,UnknownIdInLayout" />
+
+        </LinearLayout>
+
+        <include layout="@layout/line_horizontal" />
+
+        <LinearLayout
+            android:id="@+id/rl_visit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dp_12">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="就诊人"
+                android:textColor="#afb2c4"
+                android:textSize="@dimen/dp_16" />
+
+            <TextView
+                android:id="@+id/tv_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:drawableEnd="@drawable/svg_right_arrow"
+                android:drawablePadding="@dimen/dp_6"
+                android:gravity="right"
+                android:text="周重"
+                android:textColor="@color/txtSuperColor"
+                android:textSize="@dimen/dp_16"
+                tools:ignore="SpUsage,UnknownIdInLayout" />
+
+        </LinearLayout>
+
+        <include layout="@layout/line_horizontal" />
+
+        <LinearLayout
+            android:id="@+id/rl_time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dp_12">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="就诊时间"
+                android:textColor="#afb2c4"
+                android:textSize="@dimen/dp_16" />
+
+            <TextView
+                android:id="@+id/tv_sex"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:drawableEnd="@drawable/svg_right_arrow"
+                android:drawablePadding="@dimen/dp_6"
+                android:gravity="right"
+                android:text="2018-08-28"
+                android:textColor="@color/txtSuperColor"
+                android:textSize="@dimen/dp_16"
+                tools:ignore="SpUsage,UnknownIdInLayout" />
+
+        </LinearLayout>
+
+        <include layout="@layout/line_horizontal" />
+
+        <LinearLayout
+            android:id="@+id/rl_hospital"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dp_12">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="就诊医院"
+                android:textColor="#afb2c4"
+                android:textSize="@dimen/dp_16" />
+
+            <TextView
+                android:layout_marginRight="@dimen/dp_12"
+                android:id="@+id/tv_rl_hospital"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:gravity="right"
+                android:text="中南医院"
+                android:textColor="@color/txtSuperColor"
+                android:textSize="@dimen/dp_16"/>
+
+        </LinearLayout>
+
+        <include layout="@layout/line_horizontal" />
+
+        <RelativeLayout
+            android:id="@+id/Ll_address"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_130"
+            android:layout_margin="@dimen/dp_12"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/a"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="病情描述"
+                android:textColor="#afb2c4"
+                android:textSize="@dimen/dp_16" />
+
+            <EditText
+                android:id="@+id/et_describe"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/a"
+                android:layout_marginTop="@dimen/dp_8"
+                android:background="@null"
+                android:ellipsize="end"
+                android:textColor="@color/txtSuperColor"
+                android:textCursorDrawable="@null"
+                android:textSize="@dimen/dp_16" />
+
+            <TextView
+                android:id="@+id/b"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/dp_8"
+                android:text="/100"
+                android:textColor="@color/txtSecondColor"
+                android:textSize="@dimen/dp_16" />
+
+            <TextView
+                android:id="@+id/tv_limit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginRight="@dimen/dp_3"
+                android:layout_toLeftOf="@+id/b"
+                android:text="0"
+                android:textColor="@color/txtSecondColor"
+                android:textSize="@dimen/dp_16" />
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/lineColor" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dp_10"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/iamge_recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_12"
+                android:layout_marginRight="@dimen/dp_12"
+                android:layout_marginTop="16dp"
+                android:scrollbars="none" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/dp_12"
+                android:layout_marginStart="@dimen/dp_18"
+                android:text="添加电子病历，最多三张" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+</ScrollView>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dp_12">
+
+        <TextView
+            android:id="@+id/tv_Name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="花王纸尿裤"
+            android:textColor="#FF909090"
+            android:textSize="14dp" />
+
+        <LinearLayout
+            android:padding="@dimen/dp_5"
+            android:id="@+id/ll_delete"
+            android:layout_width="@dimen/dp_50"
+            android:layout_height="20dp"
+            android:layout_alignParentRight="true"
+            android:gravity="right">
+            <android.support.v7.widget.AppCompatImageView
+                android:layout_width="@dimen/dp_12"
+                android:layout_height="@dimen/dp_12"
+                android:layout_alignParentRight="true"
+                android:src="@mipmap/x"
+                android:textColor="#FF909090" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+</LinearLayout>

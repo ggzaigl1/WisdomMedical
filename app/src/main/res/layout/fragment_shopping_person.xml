@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/white"
+              android:orientation="vertical">
+
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_200"
+            android:background="@mipmap/shooping_header">
+
+        <android.support.v7.widget.AppCompatImageView
+                android:id="@+id/iv_imgHeader"
+                android:layout_width="84dp"
+                android:layout_height="84dp"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="24dp"
+                android:background="@drawable/icon_doctor"/>
+
+        <TextView
+                android:id="@+id/tv_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/iv_imgHeader"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="@dimen/dp_16"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_16"/>
+    </RelativeLayout>
+
+    <TextView
+            android:id="@+id/tv_payment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_32"
+            android:layout_marginTop="@dimen/dp_32"
+            android:drawableStart="@mipmap/fukuan"
+            android:drawablePadding="@dimen/dp_24"
+            android:gravity="center_vertical"
+            android:text="待付款"
+            android:textColor="@color/txtSuperColor"
+            android:textSize="@dimen/sp_16"/>
+
+    <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_1"
+            android:layout_marginStart="70dp"
+            android:layout_marginTop="@dimen/dp_8"
+            android:background="@color/bgColor"/>
+
+    <TextView
+            android:id="@+id/tv_drugOrder"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_32"
+            android:layout_marginTop="@dimen/dp_6"
+            android:drawableStart="@mipmap/dingdan"
+            android:drawablePadding="@dimen/dp_24"
+            android:gravity="center_vertical"
+            android:text="我的订单"
+            android:textColor="@color/txtSuperColor"
+            android:textSize="@dimen/sp_16"/>
+
+    <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_1"
+            android:layout_marginStart="70dp"
+            android:layout_marginTop="@dimen/dp_8"
+            android:background="@color/bgColor"/>
+
+    <TextView
+            android:id="@+id/tv_myCollection"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_32"
+            android:layout_marginTop="@dimen/dp_6"
+            android:drawableStart="@mipmap/shoucang"
+            android:drawablePadding="@dimen/dp_24"
+            android:gravity="center_vertical"
+            android:text="我的收藏"
+            android:textColor="@color/txtSuperColor"
+            android:textSize="@dimen/sp_16"/>
+
+    <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_1"
+            android:layout_marginStart="70dp"
+            android:layout_marginTop="@dimen/dp_8"
+            android:background="@color/bgColor"/>
+
+</LinearLayout>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/tv_merchant"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_16"
+        android:layout_marginTop="@dimen/dp_16"
+        android:text="商家直发"
+        android:textColor="#3C2E25"
+        android:textSize="@dimen/sp_15"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/dp_16"
+        android:text="本单已免运费"
+        android:textColor="#909090"
+        android:textSize="@dimen/sp_13"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tv_merchant" />
+
+    <View
+        android:id="@+id/trolley_line"
+        android:layout_width="0dp"
+        android:layout_height="1px"
+        android:layout_marginTop="@dimen/dp_16"
+        android:background="#909090"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_merchant" />
+
+    <TextView
+        android:id="@+id/tv_discounts"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_16"
+        android:layout_marginTop="@dimen/dp_12"
+        android:layout_marginBottom="@dimen/dp_16"
+        android:text="满减"
+        android:textColor="#FF8300"
+        android:textSize="@dimen/dp_12"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/trolley_line"
+        android:padding="@dimen/dp_2"
+        android:background="@drawable/trolley_full_bg"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="已享受满50减5"
+        android:textColor="#3C2E25"
+        android:textSize="@dimen/sp_14"
+        app:layout_constraintTop_toTopOf="@+id/tv_discounts"
+        app:layout_constraintLeft_toRightOf="@+id/tv_discounts"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_discounts"
+        android:layout_marginLeft="@dimen/dp_16"/>
+
+</android.support.constraint.ConstraintLayout>

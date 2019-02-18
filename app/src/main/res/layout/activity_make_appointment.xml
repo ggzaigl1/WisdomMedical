@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <include
+        android:id="@+id/header_layout"
+        layout="@layout/base_activity_head" />
+
+    <TextView
+        android:id="@+id/tvWeek"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="@dimen/spacing_medium_small"
+        android:singleLine="true"
+        android:textSize="@dimen/sp_16"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintLeft_toRightOf="@+id/imgLastWeek"
+        app:layout_constraintRight_toLeftOf="@+id/imgNextWeek"
+        app:layout_constraintTop_toBottomOf="@id/header_layout" />
+
+    <android.support.v7.widget.AppCompatImageView
+        android:id="@+id/imgLastWeek"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/spacing_small_much"
+        android:padding="@dimen/spacing_small"
+        android:src="@drawable/svg_shadow_left_arrow"
+        app:layout_constraintBottom_toBottomOf="@+id/tvWeek"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/tvWeek"
+        app:layout_constraintTop_toTopOf="@+id/tvWeek" />
+
+    <android.support.v7.widget.AppCompatImageView
+        android:id="@+id/imgNextWeek"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/spacing_small_much"
+        android:padding="@dimen/spacing_small"
+        app:srcCompat="@drawable/svg_shadow_right_arrow"
+        app:layout_constraintBottom_toBottomOf="@+id/tvWeek"
+        app:layout_constraintLeft_toRightOf="@id/tvWeek"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tvWeek" />
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rvMake"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="20dp"
+        android:padding="4dp"
+        app:layout_constraintBottom_toTopOf="@+id/tvCanMakeAppointment"
+        app:layout_constraintTop_toBottomOf="@id/tvWeek" />
+
+
+    <TextView
+        android:id="@+id/tvMakeSuccess"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp"
+        android:drawablePadding="@dimen/spacing_small_much"
+        android:gravity="center"
+        android:paddingEnd="@dimen/spacing_medium_small"
+        android:singleLine="true"
+        android:text="@string/appointment_success"
+        android:textColor="@color/txtSuperColor"
+        android:textSize="@dimen/txt_small"
+        app:layout_constraintBottom_toTopOf="@+id/tvConfirm"
+        app:layout_constraintRight_toLeftOf="@+id/tvCanMakeAppointment" />
+
+    <TextView
+        android:id="@+id/tvCanMakeAppointment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp"
+        android:drawablePadding="@dimen/spacing_small_much"
+        android:gravity="center"
+        android:paddingEnd="@dimen/spacing_medium_small"
+        android:singleLine="true"
+        android:text="@string/to_make_appointment"
+        android:textColor="@color/txtSuperColor"
+        android:textSize="@dimen/txt_small"
+        app:layout_constraintBottom_toTopOf="@+id/tvConfirm"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <Button
+        android:id="@+id/tvConfirm"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/dp_45"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:background="@drawable/shape_login_bg"
+        android:text="@string/ok"
+        android:textColor="@color/white"
+        android:textSize="@dimen/txt_small"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+</android.support.constraint.ConstraintLayout>

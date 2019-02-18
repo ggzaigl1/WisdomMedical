@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+        <RelativeLayout
+                android:id="@+id/rl_banner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@mipmap/person_header">
+
+            <android.support.v7.widget.AppCompatImageView
+                    android:id="@+id/iv_header"
+                    android:layout_width="68dp"
+                    android:layout_height="68dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="40dp"
+                    android:background="@mipmap/icon_doctor"/>
+
+            <TextView
+                    android:id="@+id/tv_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="20dp"
+                    android:layout_toEndOf="@+id/iv_header"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp_16"/>
+
+        </RelativeLayout>
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp">
+
+            <TextView
+                    android:id="@+id/MyAdvice"
+                    android:layout_width="@dimen/dp_0"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawablePadding="8dp"
+                    android:drawableTop="@mipmap/wdzx"
+                    android:gravity="center"
+                    android:text="@string/my_advice"
+                    android:textColor="@color/txtSuperColor"
+                    android:textSize="@dimen/sp_14"/>
+
+            <TextView
+                    android:id="@+id/drug_orders"
+                    android:layout_width="@dimen/dp_0"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawablePadding="8dp"
+                    android:drawableTop="@mipmap/ypdd"
+                    android:gravity="center"
+                    android:text="@string/drug_orders"
+                    android:textColor="@color/txtSuperColor"
+                    android:textSize="@dimen/sp_14"/>
+
+            <TextView
+                    android:id="@+id/tv_package"
+                    android:layout_width="@dimen/dp_0"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawablePadding="8dp"
+                    android:drawableTop="@mipmap/wdtc"
+                    android:gravity="center"
+                    android:text="@string/my_meal"
+                    android:textColor="@color/txtSuperColor"
+                    android:textSize="@dimen/sp_14"/>
+
+            <TextView
+                    android:id="@+id/tv_show"
+                    android:layout_width="@dimen/dp_0"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawablePadding="8dp"
+                    android:drawableTop="@mipmap/yyzs"
+                    android:gravity="center"
+                    android:text="@string/appointment_show"
+                    android:textColor="@color/txtSuperColor"
+                    android:textSize="@dimen/sp_14"/>
+
+        </LinearLayout>
+
+        <TextView
+                android:id="@+id/tv_perInfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_10"
+                android:layout_marginTop="@dimen/dp_35"
+                android:drawablePadding="@dimen/dp_30"
+                android:drawableStart="@mipmap/icon_personal_pic"
+                android:padding="@dimen/dp_10"
+                android:text="@string/personInfo"
+                android:textColor="@color/txt_Person"
+                android:textSize="@dimen/sp_16"/>
+
+        <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_marginStart="55dp"
+                android:background="@color/lineColor"/>
+
+        <TextView
+                android:id="@+id/tv_myDoctor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_10"
+                android:drawablePadding="@dimen/dp_30"
+                android:drawableStart="@mipmap/ys"
+                android:padding="@dimen/dp_10"
+                android:text="@string/my_doctor"
+                android:textColor="@color/txt_Person"
+                android:textSize="@dimen/sp_16"/>
+
+        <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_marginStart="55dp"
+                android:background="@color/lineColor"/>
+
+        <TextView
+                android:id="@+id/tv_social"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_10"
+                android:drawableStart="@mipmap/icon_personal_social"
+                android:drawablePadding="@dimen/dp_28"
+                android:padding="@dimen/dp_10"
+                android:text="@string/health_social"
+                android:textColor="@color/txt_Person"
+                android:textSize="@dimen/sp_16"/>
+
+        <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_marginStart="55dp"
+                android:background="@color/lineColor"/>
+
+        <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_10"
+                android:layout_marginTop="@dimen/dp_28"
+                android:drawablePadding="@dimen/dp_30"
+                android:drawableStart="@mipmap/zhgl"
+                android:padding="@dimen/dp_10"
+                android:text="@string/account_management"
+                android:textColor="@color/txt_Person"
+                android:textSize="@dimen/sp_16"/>
+
+        <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_marginStart="55dp"
+                android:background="@color/lineColor"/>
+
+        <TextView
+                android:id="@+id/tv_dispatching"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_10"
+                android:drawablePadding="@dimen/dp_32"
+                android:drawableStart="@mipmap/ps"
+                android:padding="@dimen/dp_10"
+                android:text="@string/dispatching"
+                android:textColor="@color/txt_Person"
+                android:textSize="@dimen/sp_16"/>
+
+        <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_marginStart="55dp"
+                android:background="@color/lineColor"/>
+
+        <TextView
+                android:id="@+id/tv_choose"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_10"
+                android:drawableStart="@mipmap/icon_personal_user_management"
+                android:drawablePadding="@dimen/dp_25"
+                android:padding="@dimen/dp_10"
+                android:text="@string/select_patient_management"
+                android:textColor="@color/txt_Person"
+                android:textSize="@dimen/sp_16"/>
+
+        <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_marginStart="55dp"
+                android:background="@color/lineColor"/>
+
+        <TextView
+                android:id="@+id/tv_setUp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_10"
+                android:drawableStart="@mipmap/sz"
+                android:drawablePadding="@dimen/dp_30"
+                android:padding="@dimen/dp_10"
+                android:text="@string/set_up"
+                android:textColor="@color/txt_Person"
+                android:textSize="@dimen/sp_16"/>
+
+        <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_marginBottom="@dimen/dp_24"
+                android:layout_marginStart="55dp"
+                android:background="@color/lineColor"/>
+
+    </LinearLayout>
+
+</ScrollView>

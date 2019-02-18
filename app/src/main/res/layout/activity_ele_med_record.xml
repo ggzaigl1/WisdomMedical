@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                tools:context=".ui.personal.activity.EleMedRecordActivity">
+
+    <include layout="@layout/base_activity_head" />
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_above="@+id/bt_delete"
+        android:id="@+id/rv_mList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/Rl_bg" />
+
+    <Button
+        android:id="@+id/bt_delete"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:background="#e96666"
+        android:text="@string/delete"
+        android:textColor="@color/white"
+        android:textSize="@dimen/dp_18"
+        android:visibility="gone" />
+
+</RelativeLayout>

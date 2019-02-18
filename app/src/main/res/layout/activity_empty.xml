@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:gravity="center"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v7.widget.AppCompatImageView
+        android:id="@+id/img"
+        android:layout_width="@dimen/dp_200"
+        android:layout_height="@dimen/dp_200"
+        android:src="@mipmap/icon_empty" />
+
+    <TextView
+        android:textSize="@dimen/dp_18"
+        android:textColor="@color/mainColor"
+        android:gravity="center"
+        android:layout_below="@+id/img"
+        android:layout_width="@dimen/dp_200"
+        android:layout_height="wrap_content"
+        android:text="暂无添加电子病历" />
+
+</RelativeLayout>

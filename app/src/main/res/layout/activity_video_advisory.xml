@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+    <include layout="@layout/base_activity_head"/>
+
+    <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:scrollbars="none">
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:orientation="vertical">
+
+            <LinearLayout
+                    android:id="@+id/Ll_people_set"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:orientation="horizontal">
+
+                <TextView
+                    android:textColor="@color/txtSuperColor"
+                        android:id="@+id/tv_name"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/sp_16"
+                        android:text="@string/patient_information"/>
+
+                <TextView
+                        android:id="@+id/text_people"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/sp_12"
+                        android:gravity="center_vertical"
+                        android:textColor="@color/txtLight"
+                        android:drawableEnd="@mipmap/icon_right_sensory"/>
+            </LinearLayout>
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:orientation="horizontal">
+
+                <TextView
+                    android:textColor="@color/txtSuperColor"
+                        android:id="@+id/tv_data2String"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/sp_16"
+                        android:text="@string/voice_time"/>
+
+                <!--<TextView-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:textSize="@dimen/sp_12"-->
+                <!--android:gravity="center_vertical"-->
+                <!--android:textColor="@color/txtLight"-->
+                <!--android:drawableEnd="@mipmap/icon_right_sensory"/>-->
+            </LinearLayout>
+
+            <View
+                    android:layout_width="wrap_content"
+                    android:layout_height="1dp"
+                    android:background="@color/bgColor"/>
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:orientation="vertical">
+
+                <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/disease_name"
+                        android:padding="10dp"
+                        android:textSize="@dimen/sp_16"
+                        android:textColor="@color/black"/>
+
+                <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/shape_edit_bg"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginLeft="10dp"
+                        >
+
+                    <EditText
+                            android:id="@+id/id_editor_detail"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentTop="true"
+                            android:background="@null"
+                            android:gravity="top"
+                            android:hint="@string/disease_name_content"
+                            android:maxLength="10"
+                            android:minLines="2"
+                            android:padding="@dimen/dp_10"
+                            android:textSize="@dimen/sp_14"/>
+
+                    <TextView
+                            android:id="@+id/id_editor_detail_font_count"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_below="@+id/id_editor_detail"
+                            android:paddingBottom="5dp"
+                            android:paddingEnd="15dp"
+                            android:text="0/10"
+                            android:textColor="@color/txtSuperLight"
+                            android:textSize="@dimen/sp_14"/>
+                </RelativeLayout>
+
+                <android.support.v7.widget.RecyclerView
+                        android:id="@+id/ry_image_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/dp_8"
+                        android:scrollbars="none"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="vertical">
+
+                <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/disease_particulars"
+                        android:padding="10dp"
+                        android:textSize="@dimen/sp_16"
+                        android:textColor="@color/txtSuperColor"/>
+
+                <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/shape_edit_bg"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true"
+                        >
+
+                    <EditText
+                            android:id="@+id/id_editor_detail_name"
+                            android:layout_width="match_parent"
+                            android:layout_height="120dp"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentTop="true"
+                            android:background="@null"
+                            android:gravity="top"
+                            android:hint="@string/disease_name_particulars"
+                            android:maxLength="300"
+                            android:minLines="8"
+                            android:padding="@dimen/dp_10"
+                            android:textSize="@dimen/sp_14"/>
+
+                    <TextView
+                            android:id="@+id/id_editor_detail_font_count_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_below="@+id/id_editor_detail_name"
+                            android:paddingBottom="5dp"
+                            android:paddingEnd="15dp"
+                            android:text="0/300"
+                            android:textColor="@color/txtSuperLight"
+                            android:textSize="@dimen/sp_14"/>
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dp_10"
+                    android:orientation="vertical">
+
+                <android.support.v7.widget.RecyclerView
+                        android:id="@+id/iamge_recycler_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="80dp"
+                        android:scrollbars="none"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="16dp"/>
+
+                <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="18dp"
+                        android:text="@string/pic_tree"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/imageTextBg"
+            android:orientation="horizontal">
+
+        <TextView
+                android:id="@+id/tv_order"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:textSize="22sp"
+                android:textColor="@color/red"
+                android:layout_marginStart="15dp"
+                android:text="¥ 26"/>
+
+        <Button
+                android:id="@+id/bt_Buy"
+                android:layout_width="120dp"
+                android:layout_height="match_parent"
+                android:text="@string/advisory"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:background="@color/main_bg"/>
+    </LinearLayout>
+</LinearLayout>

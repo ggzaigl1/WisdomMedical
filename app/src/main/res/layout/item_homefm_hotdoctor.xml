@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/layoutDoctor"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="@dimen/spacing_medium_small"
+    android:paddingLeft="@dimen/dp_4"
+    android:paddingRight="@dimen/dp_4"
+    android:paddingTop="@dimen/spacing_medium_small">
+
+    <TextView
+        android:id="@+id/tvHotDoctor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/spacing_medium_small"
+        android:singleLine="true"
+        android:text="@string/popular_doctor"
+        android:textColor="@color/txtSuperColor"
+        android:textSize="@dimen/txt_medium"
+        android:visibility="gone"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <android.support.v7.widget.AppCompatImageView
+        android:id="@+id/imgDoctor"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:scaleType="fitCenter"
+        android:src="@mipmap/icon_doctor"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvHotDoctor" />
+
+    <TextView
+        android:id="@+id/tvDoctorName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingStart="@dimen/dp_20"
+        android:paddingEnd="@dimen/dp_12"
+        android:singleLine="true"
+        android:textColor="@color/txtSuperColor"
+        android:textSize="@dimen/sp_16"
+        app:layout_constraintBottom_toBottomOf="@id/imgDoctor"
+        app:layout_constraintLeft_toRightOf="@id/imgDoctor"
+        app:layout_constraintTop_toTopOf="@id/imgDoctor" />
+
+    <TextView
+        android:id="@+id/tvDoctorTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_doctor_tag"
+        android:singleLine="true"
+        android:textColor="#4c7ff4"
+        android:textSize="@dimen/sp_12"
+        app:layout_constraintBottom_toBottomOf="@id/tvDoctorName"
+        app:layout_constraintLeft_toRightOf="@id/tvDoctorName"
+        app:layout_constraintTop_toTopOf="@id/tvDoctorName" />
+
+
+    <TextView
+        android:id="@+id/tvDoctorAddress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawablePadding="@dimen/spacing_small_much"
+        android:paddingTop="@dimen/dp_8"
+        android:singleLine="true"
+        android:textColor="@color/txtLight"
+        android:textSize="@dimen/sp_14"
+        app:layout_constraintTop_toBottomOf="@id/imgDoctor" />
+
+    <TextView
+        android:id="@+id/tvDoctorMajor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/dp_10"
+        android:singleLine="true"
+        android:textColor="#7d97bc"
+        android:textSize="@dimen/sp_14"
+        app:layout_constraintTop_toBottomOf="@id/tvDoctorAddress" />
+
+</android.support.constraint.ConstraintLayout>

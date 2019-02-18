@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <android.support.constraint.Guideline
+            android:id="@+id/header_line"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.17"/>
+
+    <android.support.constraint.Guideline
+            android:id="@+id/footer_line"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_begin="403dp"/>
+
+    <android.support.constraint.Guideline
+            android:id="@+id/left_line"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="@dimen/dp_50"/>
+
+    <android.support.constraint.Guideline
+            android:id="@+id/right_line"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_end="@dimen/dp_50"/>
+
+    <TextView
+            android:id="@+id/login_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/phone_login"
+            android:textColor="@color/txtSuperColor"
+            android:textSize="22sp"
+            app:layout_constraintLeft_toLeftOf="@+id/left_line"
+            app:layout_constraintRight_toRightOf="@+id/right_line"
+            app:layout_constraintTop_toBottomOf="@+id/header_line"/>
+
+
+    <android.support.v7.widget.AppCompatEditText
+            android:id="@+id/login_username"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dp_50"
+            android:layout_marginTop="@dimen/dp_60"
+            android:background="@null"
+            android:hint="@string/please_enter_username"
+            android:textSize="@dimen/sp_16"
+            android:textColorHint="#cdd0d5"
+            android:textCursorDrawable="@null"
+            android:lines="1"
+            android:singleLine="true"
+            android:maxLength="20"
+            app:layout_constraintLeft_toLeftOf="@+id/left_line"
+            app:layout_constraintRight_toRightOf="@+id/right_line"
+            app:layout_constraintTop_toBottomOf="@+id/login_title"/>
+
+    <View
+            android:id="@+id/username_line"
+            android:layout_width="0dp"
+            android:layout_height="0.5dp"
+            android:background="@color/lineColor"
+            app:layout_constraintLeft_toLeftOf="@+id/left_line"
+            app:layout_constraintRight_toRightOf="@+id/right_line"
+            app:layout_constraintTop_toBottomOf="@+id/login_username"/>
+
+
+    <android.support.v7.widget.AppCompatEditText
+            android:id="@+id/login_password"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dp_50"
+            android:background="@null"
+            android:hint="@string/please_enter_code"
+            android:textColorHint="#cdd0d5"
+            android:textCursorDrawable="@null"
+            android:textSize="@dimen/sp_16"
+            android:lines="1"
+            android:singleLine="true"
+            android:maxLength="6"
+            android:inputType="phone"
+            app:layout_constraintLeft_toLeftOf="@+id/left_line"
+            app:layout_constraintRight_toRightOf="@+id/right_line"
+            app:layout_constraintTop_toBottomOf="@+id/login_username"/>
+
+    <Button
+            android:id="@+id/access_verification"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@+id/password_line"
+            app:layout_constraintRight_toRightOf="@+id/right_line"
+            android:textColor="#6f8bef"
+            android:textSize="@dimen/sp_16"
+            android:textAllCaps="false"
+            android:background="@drawable/shape_login_access_verification"
+            android:text="@string/verification_code"/>
+
+    <View
+            android:id="@+id/password_line"
+            android:layout_width="0dp"
+            android:layout_height="0.5dp"
+            android:background="@color/lineColor"
+            android:layout_marginEnd="@dimen/dp_10"
+            app:layout_constraintLeft_toLeftOf="@+id/left_line"
+            app:layout_constraintRight_toLeftOf="@+id/access_verification"
+            app:layout_constraintTop_toBottomOf="@+id/login_password"/>
+
+
+    <TextView
+            android:id="@+id/login_phone_verification"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/dp_16"
+            android:layout_marginTop="@dimen/dp_20"
+            android:text="@string/pad_login"
+            android:visibility="gone"
+            android:textColor="#6f8bef"
+            android:textSize="@dimen/sp_16"
+            app:layout_constraintRight_toRightOf="@+id/right_line"
+            app:layout_constraintTop_toBottomOf="@+id/password_line"/>
+
+    <Button
+            android:id="@+id/login_btn"
+            android:layout_width="300dp"
+            android:layout_height="@dimen/dp_45"
+            android:layout_marginTop="@dimen/dp_40"
+            android:background="@drawable/shape_login_bg"
+            android:text="@string/login"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_18"
+            app:layout_constraintLeft_toLeftOf="@+id/left_line"
+            app:layout_constraintRight_toRightOf="@+id/right_line"
+            app:layout_constraintTop_toBottomOf="@+id/login_phone_verification"/>
+
+
+</android.support.constraint.ConstraintLayout>

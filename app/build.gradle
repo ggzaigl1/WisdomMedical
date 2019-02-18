@@ -1,0 +1,80 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+
+android {
+    compileSdkVersion var.compileSdkVersion
+    buildToolsVersion var.buildToolsVersion
+    defaultConfig {
+        applicationId "com.hjy.wisdommedical"
+        minSdkVersion var.minSdkVersion
+        targetSdkVersion var.targetSdkVersion
+
+        versionCode 2
+        versionName "1.2"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        vectorDrawables.useSupportLibrary = true//配置5.0 版本以下可以使用svg
+
+        multiDexEnabled true
+
+        ndk {
+            // 设置支持的SO库架构
+            abiFilters "armeabi", "armeabi-v7a", "x86", "mips"
+        }
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        targetCompatibility 1.8
+        sourceCompatibility 1.8
+    }
+
+    lintOptions {
+        checkReleaseBuilds false
+        abortOnError false
+    }
+
+    sourceSets {
+        main {
+            // 设置Jni so文件路径 如果有jniLibs目录就不需要设置，好像手动创建的 jniLibs目录无效
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+}
+
+dependencies {
+    compileOnly fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+    testImplementation 'junit:junit:4.12'
+    implementation 'com.android.support:multidex:1.0.3'
+    implementation "com.android.support:appcompat-v7:$var.supportLibraryVersion"
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+    implementation 'com.google.android:flexbox:0.3.2'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
+    implementation 'com.ashokvarma.android:bottom-navigation-bar:2.0.4'
+//    implementation 'com.fy.grace:baselibrary:1.0.1'
+    implementation 'com.bigkoo:convenientbanner:2.0.5'
+    /*仿京东地址选择器*/
+    implementation 'com.smartTop:jd-address:1.0.3'
+    implementation 'com.hedgehog.ratingbar:app:1.1.2'
+    implementation 'top.zibin:Luban:1.1.8'
+    implementation 'com.google.android:flexbox:0.3.2'
+    implementation files('libs/alipaySdk-20180601.jar')
+    //腾讯支付依赖库
+    implementation 'com.tencent.mm.opensdk:wechat-sdk-android-with-mta:+'
+    implementation 'org.greenrobot:eventbus:3.0.0'
+    implementation project(':baselibrary')
+    implementation project(':imagepicker')
+    implementation project(':pickerview')
+    implementation project(':chatUI')
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+}
+repositories {
+    mavenCentral()
+}

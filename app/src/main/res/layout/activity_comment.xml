@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/white"
+              android:orientation="vertical"
+              tools:context=".ui.inquiry.activity.CommentActivity">
+
+    <include layout="@layout/base_activity_head"/>
+
+    <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:orientation="horizontal"
+            android:padding="18dp">
+
+        <ImageView
+                android:layout_width="@dimen/dp_65"
+                android:layout_height="@dimen/dp_65"
+                android:background="@mipmap/icon_doctor"/>
+
+        <LinearLayout
+                android:layout_width="@dimen/dp_200"
+                android:layout_height="match_parent"
+                android:layout_marginStart="25dp"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+            <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                <TextView
+                        android:id="@+id/tv_docName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/txtSuperColor"
+                        android:textSize="@dimen/sp_16"/>
+
+                <TextView
+                        android:id="@+id/tv_titleName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="12dp"
+                        android:textColor="@color/txtSecondColor"
+                        android:textSize="12sp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp">
+
+                <TextView
+                        android:id="@+id/tv_hospitalName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/txtSecondColor"
+                        android:textSize="14sp"/>
+
+                <TextView
+                        android:id="@+id/tv_departmentName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="12dp"
+                        android:textColor="@color/txtSecondColor"
+                        android:textSize="12sp"/>
+
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginLeft="@dimen/dp_40"
+            android:layout_marginRight="@dimen/dp_40"
+            android:layout_marginTop="12dp"
+            android:background="@color/lineColor"/>
+
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="5dp">
+
+        <com.hedgehog.ratingbar.RatingBar
+                android:id="@+id/RatingBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_centerVertical="true"
+                app:starImagePadding="@dimen/dp_12"
+                app:starImageHeight="40dp"
+                app:starImageWidth="40dp"/>
+    </RelativeLayout>
+
+
+    <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="none"
+            />
+
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_marginLeft="@dimen/dp_12"
+            android:layout_marginRight="@dimen/dp_12">
+
+        <EditText
+                android:id="@+id/et_feedback"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/shape_edit_bg"
+                android:maxLength="140"
+                android:gravity="start"
+                android:hint="@string/other_comments_suggestions"
+                android:textColorHint="#9daad6"
+                android:padding="@dimen/dp_4"
+                android:textCursorDrawable="@null"
+                android:textSize="@dimen/sp_14"/>
+
+        <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentEnd="true"
+                android:layout_margin="5dp">
+
+            <TextView
+                    android:id="@+id/tv_inputNum"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:textColor="#9a9a9a"/>
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" /100"
+                    android:textColor="#9a9a9a"/>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <Button
+            android:id="@+id/bt_comment"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_45"
+            android:layout_marginLeft="@dimen/dp_30"
+            android:layout_marginRight="@dimen/dp_30"
+            android:layout_marginTop="@dimen/dp_50"
+            android:background="@drawable/shape_login_bg"
+            android:text="@string/evaluate"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_18"/>
+
+</LinearLayout>

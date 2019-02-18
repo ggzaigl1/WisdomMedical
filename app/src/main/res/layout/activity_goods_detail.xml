@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/Rl_relationship"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.shopping.home.GoodsDetailActivity">
+
+    <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_evaList"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/ll"/>
+
+    <android.support.v7.widget.AppCompatImageView
+            android:id="@+id/iv_back"
+            android:layout_width="@dimen/dp_35"
+            android:layout_height="@dimen/dp_35"
+            android:layout_margin="@dimen/dp_15"
+            android:src="@mipmap/back2x"/>
+
+    <LinearLayout
+            android:id="@+id/ll"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_50"
+            android:layout_alignParentBottom="true"
+            android:background="@color/white"
+            android:orientation="horizontal">
+
+        <android.support.v7.widget.AppCompatImageView
+                android:id="@+id/iv_collect"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1.2"
+                android:padding="@dimen/dp_8"
+                tools:ignore="VectorDrawableCompat"/>
+
+        <View
+                android:layout_width="1px"
+                android:layout_height="match_parent"
+                android:background="@color/lineColor"/>
+
+        <RelativeLayout
+                android:id="@+id/lookCart"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1.2">
+
+            <android.support.v7.widget.AppCompatImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="@dimen/dp_6"
+                    app:srcCompat="@drawable/svg_shopcart"
+                    tools:ignore="VectorDrawableCompat"/>
+
+            <TextView
+                    android:id="@+id/tvCartNum"
+                    android:layout_width="14dp"
+                    android:layout_height="14dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_margin="@dimen/dp_8"
+                    android:background="@drawable/shape_tips"
+                    android:gravity="center"
+                    android:visibility="gone"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp_10"/>
+        </RelativeLayout>
+
+
+        <View
+                android:layout_width="1px"
+                android:layout_height="match_parent"
+                android:background="@color/lineColor"/>
+
+        <TextView
+                android:id="@+id/tv_addShopCart"
+                android:layout_width="@dimen/dp_0"
+                android:layout_height="match_parent"
+                android:layout_weight="3"
+                android:background="#919dff"
+                android:gravity="center"
+                android:text="加入购物车"
+                android:textColor="@color/white"
+                android:textSize="@dimen/dp_16"/>
+
+        <TextView
+                android:id="@+id/tv_buyNow"
+                android:layout_width="@dimen/dp_0"
+                android:layout_height="match_parent"
+                android:layout_weight="3"
+                android:background="#6472df"
+                android:gravity="center"
+                android:text="立即购买"
+                android:textColor="@color/white"
+                android:textSize="@dimen/dp_16"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+    <include
+            android:id="@+id/head"
+            layout="@layout/base_activity_head"/>
+
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+            android:id="@+id/refreshLayout"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toTopOf="@+id/checkAll"
+            app:layout_constraintTop_toBottomOf="@+id/head"
+            >
+
+        <android.support.v7.widget.RecyclerView
+                android:id="@+id/shoppingTrolleyList"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+    <CheckBox
+            android:id="@+id/checkAll"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dp_50"
+            android:drawableStart="@drawable/selector_check_bg"
+            android:drawablePadding="@dimen/sp_10"
+            android:paddingStart="@dimen/sp_10"
+            android:paddingEnd="@dimen/sp_10"
+            android:text="全选"
+            android:button="@null"
+            android:textSize="@dimen/sp_12"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <TextView
+            android:id="@+id/tvPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dp_50"
+            android:text="价格"
+            android:textColor="@color/orange"
+            android:gravity="center_vertical"
+            app:layout_constraintLeft_toRightOf="@+id/checkAll"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+    <Button
+            android:id="@+id/btnSettleAccounts"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dp_50"
+            android:background="@drawable/shape_fragment_shopping_trolley"
+            android:gravity="center"
+            android:text="去结算"
+            android:textSize="@dimen/sp_16"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"/>
+
+    <Button
+            android:id="@+id/btnDelete"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dp_50"
+            android:gravity="center"
+            android:text="@string/delete"
+            android:textSize="@dimen/sp_16"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:visibility="gone"
+            android:background="@drawable/shape_fragment_shopping_trolley"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"/>
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <include layout="@layout/base_activity_head" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_45"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:drawablePadding="2dp"
+            android:drawableStart="@drawable/svg_mandatory_star"
+            android:gravity="center"
+            android:text="@string/name"
+            android:textColor="@color/txt_health" />
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_8"
+            android:gravity="right"
+            android:textColor="@color/txtSuperColor"
+            android:textSize="@dimen/sp_14"
+            tools:ignore="RtlSymmetry" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_1"
+        android:background="#f1f1f1" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_45"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="5dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:drawablePadding="2dp"
+            android:drawableStart="@drawable/svg_mandatory_star"
+            android:gravity="center"
+            android:text="@string/add_sex"
+            android:textColor="@color/txt_health" />
+
+
+        <TextView
+            android:id="@+id/tv_sex"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_8"
+            android:gravity="right|center_vertical"
+            android:paddingEnd="@dimen/dp_10"
+            android:textColor="@color/txtSuperColor"
+            android:textSize="@dimen/sp_14"
+            tools:ignore="RtlSymmetry" />
+
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_1"
+        android:background="#f1f1f1" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_45"
+        android:layout_marginLeft="24dp"
+        android:layout_marginRight="5dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:drawablePadding="2dp"
+            android:gravity="center"
+            android:text="@string/add_id_number"
+            android:textColor="@color/txt_health" />
+
+
+        <TextView
+            android:id="@+id/tv_IdNum"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_8"
+            android:gravity="right|center_vertical"
+            android:textColor="@color/txtSuperColor"
+            android:textSize="@dimen/sp_14"
+            tools:ignore="RtlSymmetry" />
+
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_1"
+        android:background="#f1f1f1" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_45"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="5dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:drawablePadding="2dp"
+            android:drawableStart="@drawable/svg_mandatory_star"
+            android:gravity="center"
+            android:text="@string/add_date"
+            android:textColor="@color/txt_health" />
+
+
+        <TextView
+            android:id="@+id/tv_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_8"
+            android:gravity="right|center_vertical"
+            android:paddingEnd="@dimen/dp_10"
+            android:textColor="@color/txtSuperColor"
+            android:textSize="@dimen/sp_14"
+            tools:ignore="RtlSymmetry" />
+
+
+    </LinearLayout>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_1"
+        android:background="#f1f1f1" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_45"
+        android:layout_marginLeft="24dp"
+        android:layout_marginRight="5dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:drawablePadding="2dp"
+            android:gravity="center"
+            android:text="@string/address"
+            android:textColor="@color/txt_health" />
+
+
+        <TextView
+            android:id="@+id/tv_location"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_8"
+            android:gravity="right|center_vertical"
+            android:paddingEnd="@dimen/dp_10"
+            android:text="请输入"
+            android:textColor="@color/txtSuperColor"
+            android:textSize="@dimen/sp_14"
+            tools:ignore="RtlSymmetry" />
+
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_1"
+        android:background="#f1f1f1" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_45"
+        android:layout_marginLeft="24dp"
+        android:layout_marginRight="5dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:drawablePadding="2dp"
+            android:gravity="center"
+            android:text="@string/add_location"
+            android:textColor="@color/txt_health" />
+
+
+        <TextView
+            android:id="@+id/tv_site"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_8"
+            android:gravity="right|center_vertical"
+            android:textColor="@color/txtSuperColor"
+            android:textSize="@dimen/sp_14"
+            tools:ignore="RtlSymmetry" />
+
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_1"
+        android:background="#f1f1f1" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_45"
+        android:layout_marginLeft="24dp"
+        android:layout_marginRight="5dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:drawablePadding="2dp"
+            android:gravity="center"
+            android:text="@string/is_marriage"
+            android:textColor="@color/txt_health" />
+
+
+        <TextView
+            android:id="@+id/tv_IsMarriage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_8"
+            android:gravity="right|center_vertical"
+            android:paddingEnd="@dimen/dp_10"
+            android:textColor="@color/txtSuperColor"
+            android:textSize="@dimen/sp_14"
+            tools:ignore="RtlSymmetry" />
+
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_1"
+        android:background="#f1f1f1" />
+
+    <!--<Button
+            android:id="@+id/btn_basics_record_save"
+            android:layout_marginTop="@dimen/dp_50"
+            android:layout_marginRight="@dimen/dp_31"
+            android:layout_marginLeft="@dimen/dp_31"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_45"
+            android:background="@drawable/shape_basic_record_bg"
+            android:text="@string/save"
+            android:textSize="@dimen/sp_16"
+            android:textColor="@color/white"/>-->
+
+
+</LinearLayout>

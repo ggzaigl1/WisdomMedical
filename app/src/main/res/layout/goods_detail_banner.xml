@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+        <com.bigkoo.convenientbanner.ConvenientBanner
+                android:id="@+id/convenientBanner"
+                android:layout_width="match_parent"
+                android:layout_height="260dp"
+                android:layout_marginTop="6dp"
+                android:padding="@dimen/dp_10"
+                app:canLoop="true"/>
+    </RelativeLayout>
+
+    <TextView
+            android:id="@+id/tv_priceNow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dp_12"
+            android:textColor="#6472df"
+            android:textSize="@dimen/dp_16"/>
+
+    <TextView
+            android:id="@+id/tv_pdCom"
+            android:textSize="@dimen/dp_13"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_12"/>
+
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dp_12">
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shape_baoyou"
+                android:text="包邮"
+                android:textColor="@color/white"
+                android:textSize="@dimen/dp_12"/>
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:drawableLeft="@drawable/svg_tuihuo"
+                android:drawablePadding="@dimen/dp_6"
+                android:text="7天无理由退货"
+                android:textColor="@color/black"
+                android:textSize="@dimen/dp_12"/>
+
+        <TextView
+                android:layout_centerVertical="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/dp_12"
+                android:drawableLeft="@drawable/svg_location"
+                android:drawablePadding="@dimen/dp_6"
+                android:text="武汉"
+                android:textColor="@color/black"
+                android:textSize="@dimen/dp_12"/>
+    </RelativeLayout>
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical">
+
+        <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp_12"
+                android:text="评论"
+                android:textColor="@color/txtSuperColor"
+                android:textSize="@dimen/sp_16"/>
+
+        <TextView
+                android:id="@+id/tv_evaluation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:text="更多评论"
+                android:drawableEnd="@drawable/svg_right_arrow"
+                android:textSize="@dimen/sp_16"
+                android:textColor="@color/black"/>
+    </LinearLayout>
+
+
+</LinearLayout>

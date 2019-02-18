@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <android.support.v7.widget.AppCompatImageView
+            android:id="@+id/iv_check"
+            android:layout_width="@dimen/dp_32"
+            android:layout_height="@dimen/dp_32"
+            android:layout_marginLeft="@dimen/dp_16"
+            android:src="@mipmap/icon_check_normal"
+            android:scaleType="center"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+    <android.support.v7.widget.AppCompatImageView
+            android:id="@+id/iv_drug"
+            android:layout_width="@dimen/dp_64"
+            android:layout_height="@dimen/dp_64"
+            android:layout_marginLeft="@dimen/dp_32"
+            android:layout_marginTop="@dimen/dp_20"
+            android:layout_marginBottom="@dimen/dp_20"
+            android:scaleType="fitXY"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@+id/iv_check"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+            android:id="@+id/tv_drug_induc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_12"
+            android:layout_marginTop="@dimen/dp_20"
+            android:textColor="#3C2E25"
+            android:textSize="@dimen/sp_13"
+            app:layout_constraintLeft_toRightOf="@+id/iv_drug"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+            android:id="@+id/tv_specification"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textColor="#B2B2B2"
+            android:textSize="@dimen/sp_13"
+            app:layout_constraintLeft_toLeftOf="@+id/tv_drug_induc"
+            app:layout_constraintTop_toBottomOf="@+id/tv_drug_induc"/>
+
+    <TextView
+            android:id="@+id/tv_drug_money"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dp_20"
+            android:textColor="#3C2E25"
+            android:textSize="@dimen/sp_18"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="@+id/tv_drug_induc"
+            app:layout_constraintTop_toBottomOf="@+id/tv_specification"/>
+
+    <TextView
+            android:id="@+id/tv_trolley_add"
+            android:layout_width="@dimen/dp_28"
+            android:layout_height="@dimen/dp_28"
+            android:layout_marginRight="@dimen/dp_16"
+            android:background="@drawable/trolley_add_bg"
+            android:gravity="center"
+            android:text="+"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_drug_money"
+            app:layout_constraintRight_toRightOf="parent"/>
+
+    <TextView
+            android:id="@+id/tv_drug_num"
+            android:layout_width="@dimen/dp_28"
+            android:layout_height="@dimen/dp_28"
+            android:background="@drawable/trolley_center_bg"
+            android:gravity="center"
+            android:text="1"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_drug_money"
+            app:layout_constraintRight_toLeftOf="@+id/tv_trolley_add"/>
+
+    <TextView
+            android:id="@+id/tv_drug_minus"
+            android:layout_width="@dimen/dp_28"
+            android:layout_height="@dimen/dp_28"
+            android:background="@drawable/trolley_minus_bg"
+            android:gravity="center"
+            android:text="-"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_drug_money"
+            app:layout_constraintRight_toLeftOf="@+id/tv_drug_num"/>
+
+
+</android.support.constraint.ConstraintLayout>

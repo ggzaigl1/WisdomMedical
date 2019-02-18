@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:drawable="@color/appHeadBg" />
+    <!--<item android:drawable="#6472DF" android:state_focused="true" />-->
+    <!--<item android:drawable="#6472DF" android:state_selected="true" />-->
+    <!--<item android:drawable="#6472DF" android:state_pressed="true" />-->
+
+    ,/group/20181120/bc06aacf72d24e8f861002cbfec36ed1.jpeg
+</selector>

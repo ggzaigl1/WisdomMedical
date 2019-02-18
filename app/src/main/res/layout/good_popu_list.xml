@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:background="@color/white"
+              android:padding="@dimen/sp_20">
+
+    <Button
+            android:id="@+id/bt_def"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/sp_10"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_marginEnd="@dimen/sp_10"
+            android:textColor="@color/myTxtLight"
+            android:textStyle="bold"
+            android:text="默认"/>
+
+    <Button
+            android:id="@+id/bt_up"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/sp_10"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_marginEnd="@dimen/sp_10"
+            android:textColor="@color/myTxtLight"
+            android:textStyle="bold"
+            android:text="从高到低"/>
+
+    <Button
+            android:id="@+id/bt_down"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/sp_10"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_marginEnd="@dimen/sp_10"
+            android:textColor="@color/myTxtLight"
+            android:textStyle="bold"
+            android:text="从低到高"/>
+</LinearLayout>

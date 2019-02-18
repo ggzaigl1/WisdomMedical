@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.hjy.wisdommedical.widget.ArcView
+        android:id="@+id/arcTitle"
+        android:layout_width="0dp"
+        android:layout_height="280dp"
+        app:arcBackground="@mipmap/icon_diet_bg"
+        app:bgColor="@color/white"
+        app:itemColor="@color/colorHintError"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:leftCircleItem="生理"
+        app:leftCircleNum="78"
+        app:leftCircleUnit="分"
+        app:centerCircleItem="总分"
+        app:centerCircleNum="98"
+        app:centerCircleUnit="分"
+        app:rightCircleItem="心理"
+        app:rightCircleNum="25"
+        app:rightCircleUnit="分"
+        app:numColor="@color/statusBar"
+        app:unitColor="@color/button_pressed2" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <android.support.v7.widget.AppCompatImageView
+            android:id="@+id/iv_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:padding="@dimen/dp_15"
+            app:srcCompat="@drawable/svg_ic_while"
+            tools:ignore="VectorDrawableCompat" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="健康评估"
+            android:textColor="@color/white"
+            android:textSize="@dimen/dp_20" />
+
+    </RelativeLayout>
+
+
+    <Button
+        android:layout_marginTop="@dimen/dp_14"
+        android:id="@+id/btn_healthy_diet"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/dp_34"
+        android:background="@drawable/shape_health_record_btn_bg"
+        android:text="饮食建议"
+        android:textColor="@color/health_record_btn"
+        android:textSize="@dimen/sp_14"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/btn_exercise_advice"
+        app:layout_constraintTop_toBottomOf="@+id/arcTitle" />
+
+    <Button
+        android:layout_marginTop="@dimen/dp_14"
+        android:id="@+id/btn_exercise_advice"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/dp_34"
+        android:background="@drawable/shape_health_record_btn_bg"
+        android:text="运动健康"
+        android:textColor="@color/health_record_btn"
+        android:textSize="@dimen/sp_14"
+        app:layout_constraintLeft_toRightOf="@+id/btn_healthy_diet"
+        app:layout_constraintRight_toLeftOf="@+id/btn_mental_health"
+        app:layout_constraintTop_toBottomOf="@+id/arcTitle" />
+
+    <Button
+        android:layout_marginTop="@dimen/dp_14"
+        android:id="@+id/btn_mental_health"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/dp_34"
+        android:background="@drawable/shape_health_record_btn_bg"
+        android:text="心理健康"
+        android:textColor="@color/health_record_btn"
+        android:textSize="@dimen/sp_14"
+        app:layout_constraintLeft_toRightOf="@+id/btn_exercise_advice"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/arcTitle" />
+
+    <Button
+        android:id="@+id/btn_abnormal_advice"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/dp_34"
+        android:layout_marginTop="@dimen/dp_12"
+        android:background="@drawable/shape_health_record_btn_bg"
+        android:text="异常建议"
+        android:textColor="@color/health_record_btn"
+        android:textSize="@dimen/sp_14"
+        app:layout_constraintLeft_toLeftOf="@+id/btn_healthy_diet"
+        app:layout_constraintTop_toBottomOf="@+id/btn_healthy_diet" />
+
+
+    <View
+        android:layout_marginTop="@dimen/dp_25"
+        android:id="@+id/line"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        app:layout_constraintBottom_toTopOf="@+id/fragmentGroup"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_abnormal_advice"
+        android:background="@color/lineColor"/>
+
+    <FrameLayout
+        android:id="@+id/fragmentGroup"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/line" />
+
+</android.support.constraint.ConstraintLayout>

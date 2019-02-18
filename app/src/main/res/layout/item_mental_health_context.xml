@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.hjy.wisdommedical.widget.CheckableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:padding="@dimen/dp_10">
+
+    <RadioButton
+        android:id="@+id/cb_mental_health_list_item"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:button="@null"
+        android:drawableLeft="@drawable/selector_mental_cb"
+        android:drawablePadding="@dimen/dp_5"
+        android:duplicateParentState="true"
+        android:padding="4dp"
+        android:singleLine="true"
+        android:text=""
+        android:textColor="@color/myTxtLight"
+        android:textSize="@dimen/sp_14" />
+
+</com.hjy.wisdommedical.widget.CheckableLayout>

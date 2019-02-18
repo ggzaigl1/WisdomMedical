@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/white"
+              android:orientation="vertical">
+
+    <include layout="@layout/base_activity_head"/>
+
+    <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:scrollbars="none">
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:orientation="vertical">
+
+            <LinearLayout
+                    android:id="@+id/Ll_people_set"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="10dp">
+
+                <TextView
+                        android:id="@+id/tv_name"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/patient_information"
+                        android:textSize="@dimen/sp_16"/>
+
+                <TextView
+                        android:id="@+id/text_people"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableEnd="@mipmap/icon_right_sensory"
+                        android:gravity="center_vertical"
+                        android:textColor="@color/txtLight"
+                        android:textSize="@dimen/sp_12"/>
+            </LinearLayout>
+
+            <View
+                    android:layout_width="wrap_content"
+                    android:layout_height="1dp"
+                    android:background="@color/bgColor"/>
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:orientation="vertical">
+
+                <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:text="@string/disease_name"
+                        android:textColor="@color/txtSuperColor"
+                        android:textSize="@dimen/sp_16"/>
+
+                <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/shape_edit_bg">
+
+                    <EditText
+                            android:id="@+id/id_editor_detail"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentTop="true"
+                            android:background="@null"
+                            android:gravity="top"
+                            android:hint="@string/disease_name_content"
+                            android:maxLength="10"
+                            android:minLines="2"
+                            android:padding="@dimen/dp_10"
+                            android:textSize="@dimen/sp_14"/>
+
+                    <TextView
+                            android:id="@+id/id_editor_detail_font_count"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_below="@+id/id_editor_detail"
+                            android:paddingBottom="5dp"
+                            android:paddingEnd="15dp"
+                            android:text="0/10"
+                            android:textColor="@color/txtSuperLight"
+                            android:textSize="@dimen/sp_14"/>
+                </RelativeLayout>
+
+                <android.support.v7.widget.RecyclerView
+                        android:id="@+id/ry_image_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/dp_8"
+                        android:scrollbars="none"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="vertical">
+
+                <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:text="@string/disease_particulars"
+                        android:textColor="@color/txtSuperColor"
+                        android:textSize="@dimen/sp_16"/>
+
+                <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/shape_edit_bg"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true">
+
+                    <EditText
+                            android:id="@+id/id_editor_detail_name"
+                            android:layout_width="match_parent"
+                            android:layout_height="120dp"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentTop="true"
+                            android:background="@null"
+                            android:gravity="top"
+                            android:hint="@string/disease_name_particulars"
+                            android:maxLength="300"
+                            android:minLines="8"
+                            android:padding="@dimen/dp_10"
+                            android:textSize="@dimen/sp_14"/>
+
+                    <TextView
+                            android:id="@+id/id_editor_detail_font_count_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_below="@+id/id_editor_detail_name"
+                            android:paddingBottom="5dp"
+                            android:paddingEnd="15dp"
+                            android:text="0/300"
+                            android:textColor="@color/txtSuperLight"
+                            android:textSize="@dimen/sp_14"/>
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dp_10"
+                    android:orientation="vertical">
+
+                <android.support.v7.widget.RecyclerView
+                        android:id="@+id/iamge_recycler_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="80dp"
+                        android:scrollbars="none"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="16dp"/>
+
+                <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="18dp"
+                        android:text="@string/pic_tree"/>
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/imageTextBg"
+            android:orientation="horizontal">
+
+        <TextView
+                android:id="@+id/tv_order"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_weight="1"
+                android:textColor="@color/red"
+                android:textSize="@dimen/sp_22"/>
+
+        <Button
+                android:id="@+id/bt_Buy"
+                android:layout_width="120dp"
+                android:layout_height="match_parent"
+                android:background="@color/main_bg"
+                android:text="@string/advisory"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:textStyle="bold"/>
+    </LinearLayout>
+
+</LinearLayout>
